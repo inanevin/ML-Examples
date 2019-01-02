@@ -37,6 +37,7 @@ X = num.vstack((ones, age_list, exp_list, pow_list)).T
 Y = salary_list.T
 
 
+
 # These three lines are the calculations for the coefficients given in the instructions.
 coefficients = num.linalg.inv(num.dot(X.T, X))
 coefficients = num.dot(coefficients, X.T)
@@ -64,6 +65,7 @@ print(titles_sorted)
 
 plt.title("Residual Error Plot")
 plt.scatter(Y_hat, Y_hat-Y)
+
 plt.hlines(y=0, xmin=0, xmax=20000, linewidth=2)
 plt.show()
 

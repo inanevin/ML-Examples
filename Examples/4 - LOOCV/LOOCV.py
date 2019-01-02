@@ -35,6 +35,7 @@ for i in range(len(age_list)):  # Do the regression for each data point.
 
     X = num.vstack((ones, age_list, exp_list, pow_list)).T
     Y = salary_list.T
+    print(Y )
 
     X_test = X[i]   # The i'th point becomes the test data.
     Y_test = Y[i]
